@@ -25,5 +25,7 @@ if ($result === FALSE) {
 
 rewind($verbose);
 $verboseLog = stream_get_contents($verbose);
+fclose($verbose);
 
+curl_close($curl);
 var_dump($result);
